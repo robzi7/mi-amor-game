@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Core -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>✨ Constellation of Us — Mi Amor Nights Edition ✨</title>
@@ -12,176 +11,163 @@
   <link rel="apple-touch-icon" href="/mi-amor-game/icon-192.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
 
-  <!-- Open Graph / Twitter (link preview) -->
-  <meta property="og:url" content="https://robzi7.github.io/mi-amor-game/" />
+  <!-- Link preview -->
+  <meta property="og:url" content="https://robzi7.github.io/mi-amor-game/">
   <meta property="og:title" content="Constellation of Us — Mi Amor Nights Edition 💫" />
   <meta property="og:description" content="A little sky full of our memories. Tap to begin." />
-  <meta property="og:image" content="https://robzi7.github.io/mi-amor-game/og-cover.jpg" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="https://robzi7.github.io/mi-amor-game/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon & Fonts -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
   <style>
-  :root{
-    --indigo:#0a0a2e; --mid:#16213e; --royal:#1a237e; --violet:#3949ab;
-    --ba-grad: radial-gradient(1200px 600px at 10% 0%, rgba(255,255,255,.08), transparent 40%),
-               linear-gradient(135deg,var(--indigo) 0%,var(--mid) 30%,var(--royal) 70%,var(--violet) 100%);
-    --syd-grad: radial-gradient(1200px 600px at 10% 0%, rgba(255,255,255,.08), transparent 40%),
-                linear-gradient(135deg,#ffb46a 0%,#ffd08a 35%,#ffb74d 70%,#ff9800 100%);
-    --gold:#ffd700; --pink:#ff69b4; --rose:#ff1493; --paper:#efe1c9;
-  }
-  *{box-sizing:border-box; margin:0}
-  html,body{height:100%}
-  body{
-    font-family:'Cinzel',serif; color:#fff; background:var(--ba-grad); overflow:hidden;
-  }
-  body.sydney{ background:var(--syd-grad); }
-  h1,h2,h3{font-weight:600}
-  a{color:#ffd700}
-  button{font-family:inherit}
+    :root{
+      --indigo:#0a0a2e; --mid:#16213e; --royal:#1a237e; --violet:#3949ab;
+      --ba-grad: radial-gradient(1200px 600px at 10% 0%, rgba(255,255,255,.08), transparent 40%),
+                 linear-gradient(135deg,var(--indigo) 0%,var(--mid) 30%,var(--royal) 70%,var(--violet) 100%);
+      --syd-grad: radial-gradient(1200px 600px at 10% 0%, rgba(255,255,255,.08), transparent 40%),
+                  linear-gradient(135deg,#ffb46a 0%,#ffd08a 35%,#ffb74d 70%,#ff9800 100%);
+      --gold:#ffd700; --pink:#ff69b4; --rose:#ff1493; --paper:#efe1c9;
+    }
+    *{box-sizing:border-box; margin:0}
+    html,body{height:100%}
+    body{
+      font-family:'Cinzel',serif; color:#fff; background:var(--ba-grad); overflow:hidden;
+    }
+    body.sydney{ background:var(--syd-grad); }
+    h1,h2,h3{font-weight:600}
+    a{color:#ffd700}
+    button{font-family:inherit}
 
-  .stars-bg{position:fixed; inset:0; pointer-events:none; background-size:250px 150px;
-    background:
-      radial-gradient(2px 2px at 20px 30px,rgba(255,255,255,.9),transparent 60%),
-      radial-gradient(2px 2px at 120px 90px,rgba(255,215,0,.8),transparent 60%),
-      radial-gradient(1px 1px at 230px 40px,rgba(255,255,255,.6),transparent 60%),
-      radial-gradient(3px 3px at 310px 120px,rgba(255,182,193,.7),transparent 60%);
-    animation:twinkle 6s ease-in-out infinite alternate;
-  }
-  @keyframes twinkle{0%{opacity:.5;transform:scale(1)}50%{opacity:.9;transform:scale(1.05)}100%{opacity:.6;transform:scale(1)}}
+    .stars-bg{position:fixed; inset:0; pointer-events:none; background-size:250px 150px;
+      background:
+        radial-gradient(2px 2px at 20px 30px,rgba(255,255,255,.9),transparent 60%),
+        radial-gradient(2px 2px at 120px 90px,rgba(255,215,0,.8),transparent 60%),
+        radial-gradient(1px 1px at 230px 40px,rgba(255,255,255,.6),transparent 60%),
+        radial-gradient(3px 3px at 310px 120px,rgba(255,182,193,.7),transparent 60%);
+      animation:twinkle 6s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle{0%{opacity:.5;transform:scale(1)}50%{opacity:.9;transform:scale(1.05)}100%{opacity:.6;transform:scale(1)}}
 
-  .app{position:relative; z-index:1; height:100%; display:grid; place-items:center}
-  .screen{display:none; text-align:center; max-width:900px; width:95%; padding:16px; animation:fadeIn .9s ease}
-  .screen.active{display:block}
-  @keyframes fadeIn{from{opacity:0; transform:translateY(18px) scale(.98)} to{opacity:1; transform:none}}
+    .app{position:relative; z-index:1; height:100%; display:grid; place-items:center}
+    .screen{display:none; text-align:center; max-width:900px; width:95%; padding:16px; animation:fadeIn .9s ease}
+    .screen.active{display:block}
+    @keyframes fadeIn{from{opacity:0; transform:translateY(18px) scale(.98)} to{opacity:1; transform:none}}
 
-  .title{font-family:'Dancing Script',cursive; font-size:clamp(2.6rem,7vw,4.5rem);
-    background:linear-gradient(45deg,#ffd700,#ff69b4,#87ceeb,#ffd700); background-size:300% 300%;
-    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; animation:grad 9s linear infinite}
-  @keyframes grad{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+    .title{font-family:'Dancing Script',cursive; font-size:clamp(2.6rem,7vw,4.5rem);
+      background:linear-gradient(45deg,#ffd700,#ff69b4,#87ceeb,#ffd700); background-size:300% 300%;
+      -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; animation:grad 9s linear infinite}
+    @keyframes grad{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
 
-  .card{
-    background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,215,0,.10));
-    border:1.5px solid rgba(255,215,0,.35); border-radius:22px; padding:22px; backdrop-filter:blur(12px);
-    box-shadow:0 18px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.25);
-    margin-inline:auto
-  }
-  .lead{font-size:clamp(1.05rem,2.8vw,1.3rem); line-height:1.8; color:#fff}
+    .card{
+      background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,215,0,.10));
+      border:1.5px solid rgba(255,215,0,.35); border-radius:22px; padding:22px; backdrop-filter:blur(12px);
+      box-shadow:0 18px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.25);
+      margin-inline:auto
+    }
+    .lead{font-size:clamp(1.05rem,2.8vw,1.3rem); line-height:1.8; color:#fff}
 
-  .btn{
-    display:inline-block; border:0; border-radius:999px; padding:14px 28px; margin:10px;
-    color:#fff; cursor:pointer; font-weight:600; font-size:clamp(1rem,3.2vw,1.15rem);
-    background:linear-gradient(135deg,#ff69b4 0%,#ff1493 45%,#dc143c 100%);
-    box-shadow:0 10px 24px rgba(255,20,147,.35), inset 0 1px 0 rgba(255,255,255,.3);
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  .btn:hover{transform:translateY(-2px); box-shadow:0 14px 30px rgba(255,20,147,.5), inset 0 1px 0 rgba(255,255,255,.4)}
+    .btn{
+      display:inline-block; border:0; border-radius:999px; padding:14px 28px; margin:10px;
+      color:#fff; cursor:pointer; font-weight:600; font-size:clamp(1rem,3.2vw,1.15rem);
+      background:linear-gradient(135deg,#ff69b4 0%,#ff1493 45%,#dc143c 100%);
+      box-shadow:0 10px 24px rgba(255,20,147,.35), inset 0 1px 0 rgba(255,255,255,.3);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-2px); box-shadow:0 14px 30px rgba(255,20,147,.5), inset 0 1px 0 rgba(255,255,255,.4)}
 
-  .small{font-size:.9rem; opacity:.9}
-  .row{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
+    .small{font-size:.9rem; opacity:.9}
+    .row{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
 
-  /* top toggles */
-  .topbar{position:fixed; top:12px; left:12px; right:12px; display:flex; gap:8px; justify-content:space-between; z-index:9}
-  .group{display:flex; gap:8px}
-  .toggle{background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,215,0,.35); border-radius:16px; padding:8px 14px; cursor:pointer; font-size:.92rem; backdrop-filter:blur(10px)}
-  .toggle:hover{background:rgba(255,215,0,.2)}
-  .badge{font-size:.9rem; color:#ffd700}
+    /* top toggles */
+    .topbar{position:fixed; top:12px; left:12px; right:12px; display:flex; gap:8px; justify-content:space-between; z-index:9}
+    .group{display:flex; gap:8px}
+    .toggle{background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,215,0,.35); border-radius:16px; padding:8px 14px; cursor:pointer; font-size:.92rem; backdrop-filter:blur(10px)}
+    .toggle:hover{background:rgba(255,215,0,.2)}
+    .badge{font-size:.9rem; color:#ffd700}
 
-  /* hearts & sparkles */
-  .hearts, .sparkles {position:fixed; inset:0; pointer-events:none; z-index:2}
-  .heart{position:absolute; font-size:18px; color:#ff69b4; opacity:.85; animation:float 12s linear infinite}
-  @keyframes float{from{transform:translateY(100vh) translateX(0)} to{transform:translateY(-10vh) translateX(40px)}}
-  .sparkles{opacity:0; transition:opacity .5s}
-  .sparkles.active{opacity:1}
-  .spark{position:absolute; width:4px; height:4px; background:#ffd700; border-radius:50%; animation:spark 1.6s ease-in-out infinite}
-  @keyframes spark{0%,100%{transform:scale(0); opacity:0}50%{transform:scale(1.6); opacity:1}}
+    /* hearts & sparkles */
+    .hearts, .sparkles {position:fixed; inset:0; pointer-events:none; z-index:2}
+    .heart{position:absolute; font-size:18px; color:#ff69b4; opacity:.85; animation:float 12s linear forwards}
+    @keyframes float{from{transform:translateY(100vh) translateX(0)} to{transform:translateY(-10vh) translateX(40px)}}
+    .sparkles{opacity:0; transition:opacity .5s}
+    .sparkles.active{opacity:1}
+    .spark{position:absolute; width:4px; height:4px; background:#ffd700; border-radius:50%; animation:spark 1.6s ease-in-out infinite}
+    @keyframes spark{0%,100%{transform:scale(0); opacity:0}50%{transform:scale(1.6); opacity:1}}
 
-  /* constellation */
-  .canvas{position:relative; width:min(92vw,900px); height:min(64vh,520px);
-    border:2px solid rgba(255,215,0,.4); border-radius:26px; margin:10px auto; overflow:hidden;
-    background:rgba(0,0,0,.28); box-shadow:0 30px 60px rgba(0,0,0,.45), inset 0 0 90px rgba(255,215,0,.08)}
-  .info{color:#ffb6c1; margin-bottom:8px}
+    /* constellation */
+    .canvas{position:relative; width:min(92vw,900px); height:min(64vh,520px);
+      border:2px solid rgba(255,215,0,.4); border-radius:26px; margin:10px auto; overflow:hidden;
+      background:rgba(0,0,0,.28); box-shadow:0 30px 60px rgba(0,0,0,.45), inset 0 0 90px rgba(255,215,0,.08)}
+    .info{color:#ffb6c1; margin-bottom:8px}
 
-  .star{position:absolute; width:30px; height:30px; transform-origin:center; filter:drop-shadow(0 0 12px currentColor); animation:floatStar 3s ease-in-out infinite}
-  .star::before{content:'⭐'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); animation:spin 6s linear infinite, pulse 2.3s ease-in-out infinite alternate}
-  @keyframes floatStar{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-  @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
-  @keyframes pulse{from{filter:brightness(1)}to{filter:brightness(1.4)}}
-  .star.pop{animation:pop .9s ease}
-  @keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.4)}100%{transform:scale(1)}}
+    .star{position:absolute; width:30px; height:30px; transform-origin:center; filter:drop-shadow(0 0 12px currentColor); animation:floatStar 3s ease-in-out infinite}
+    .star::before{content:'⭐'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); animation:spin 6s linear infinite, pulse 2.3s ease-in-out infinite alternate}
+    @keyframes floatStar{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+    @keyframes pulse{from{filter:brightness(1)}to{filter:brightness(1.4)}}
+    .star.pop{animation:pop .9s ease}
+    @keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.4)}100%{transform:scale(1)}}
 
-  .line{position:absolute; height:3px; background:linear-gradient(90deg,transparent,rgba(255,215,0,.9) 20%, rgba(255,105,180,.9) 60%, transparent); border-radius:2px; transform-origin:left center; animation:lineGrow .9s ease-out}
-  @keyframes lineGrow{from{width:0; opacity:0} to{width:100%; opacity:1}}
+    .line{position:absolute; height:3px; background:linear-gradient(90deg,transparent,rgba(255,215,0,.9) 20%, rgba(255,105,180,.9) 60%, transparent); border-radius:2px; transform-origin:left center; animation:lineGrow .9s ease-out}
+    @keyframes lineGrow{from{width:0; opacity:0} to{width:100%; opacity:1}}
 
-  .hidden-heart{position:absolute; right:14px; bottom:14px; font-size:42px; color:#ff69b4; display:none;
-    filter:drop-shadow(0 0 18px #ff69b4); animation:beat 1.6s ease-in-out infinite}
-  .hidden-heart.show{display:block}
-  @keyframes beat{0%{transform:scale(1)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
+    .hidden-heart{position:absolute; right:14px; bottom:14px; font-size:42px; color:#ff69b4; display:none;
+      filter:drop-shadow(0 0 18px #ff69b4); animation:beat 1.6s ease-in-out infinite}
+    .hidden-heart.show{display:block}
+    @keyframes beat{0%{transform:scale(1)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
 
-  /* popups */
-  .popup{position:fixed; inset:0; display:none; place-items:center; z-index:20; padding:18px}
-  .popup.show{display:grid}
-  .modal{max-width:680px; width:min(92vw,680px); background:linear-gradient(135deg,rgba(25,25,60,.95),rgba(50,25,80,.95)); border:3px solid var(--gold); border-radius:28px; padding:26px; text-align:center; box-shadow:0 28px 60px rgba(0,0,0,.65)}
-  .scene{font-size:clamp(2.4rem,10vw,4.6rem); margin:6px 0}
-  .mtitle{font-family:'Dancing Script',cursive; font-size:clamp(1.6rem,6vw,2.4rem); color:var(--gold); margin:4px 0 8px; text-shadow:0 0 14px rgba(255,215,0,.6)}
-  .mtext{font-size:clamp(1rem,3.2vw,1.25rem); line-height:1.8; color:#ffb6c1; margin:10px 0 14px}
+    /* popups */
+    .popup{position:fixed; inset:0; display:none; place-items:center; z-index:20; padding:18px}
+    .popup.show{display:grid}
+    .modal{max-width:680px; width:min(92vw,680px); background:linear-gradient(135deg,rgba(25,25,60,.95),rgba(50,25,80,.95)); border:3px solid var(--gold); border-radius:28px; padding:26px; text-align:center; box-shadow:0 28px 60px rgba(0,0,0,.65)}
+    .scene{font-size:clamp(2.4rem,10vw,4.6rem); margin:6px 0}
+    .mtitle{font-family:'Dancing Script',cursive; font-size:clamp(1.6rem,6vw,2.4rem); color:var(--gold); margin:4px 0 8px; text-shadow:0 0 14px rgba(255,215,0,.6)}
+    .mtext{font-size:clamp(1rem,3.2vw,1.25rem); line-height:1.8; color:#ffb6c1; margin:10px 0 14px}
 
-  .progress{position:fixed; top:58px; right:12px; z-index:5; background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,215,0,.18)); border:1.5px solid rgba(255,215,0,.35); border-radius:16px; padding:10px 14px; backdrop-filter:blur(10px); color:var(--gold); font-size:.95rem}
+    .progress{position:fixed; top:58px; right:12px; z-index:5; background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,215,0,.18)); border:1.5px solid rgba(255,215,0,.35); border-radius:16px; padding:10px 14px; backdrop-filter:blur(10px); color:var(--gold); font-size:.95rem}
 
-  .fireworks{position:fixed; inset:0; pointer-events:none; z-index:25}
-  .fw{position:absolute; width:6px; height:6px; border-radius:50%; animation:boom 2.8s ease-out forwards}
-  @keyframes boom{from{transform:scale(1); opacity:1} to{transform:scale(28); opacity:0}}
+    .fireworks{position:fixed; inset:0; pointer-events:none; z-index:25}
+    .fw{position:absolute; width:6px; height:6px; border-radius:50%; animation:boom 2.8s ease-out forwards}
+    @keyframes boom{from{transform:scale(1); opacity:1} to{transform:scale(28); opacity:0}}
 
-  .heart-const{width:360px; height:280px; margin:16px auto; position:relative}
-  .hstar{position:absolute; font-size:22px; filter:drop-shadow(0 0 12px #ffd700); animation:hblink 1.6s ease-in-out infinite alternate}
-  @keyframes hblink{from{opacity:.6; transform:scale(.9)} to{opacity:1; transform:scale(1.15)}}
+    .heart-const{width:360px; height:280px; margin:16px auto; position:relative}
+    .hstar{position:absolute; font-size:22px; filter:drop-shadow(0 0 12px #ffd700); animation:hblink 1.6s ease-in-out infinite alternate}
+    @keyframes hblink{from{opacity:.6; transform:scale(.9)} to{opacity:1; transform:scale(1.15)}}
 
-  /* BA time ribbon & share row */
-  .ribbon{position:fixed; bottom:10px; left:50%; transform:translateX(-50%); background:rgba(0,0,0,.35); border:1px solid rgba(255,215,0,.4); padding:6px 12px; border-radius:14px; font-size:.92rem; backdrop-filter:blur(6px); z-index:6}
-  .ribbon.flash{animation:flash 1.4s ease}
-  @keyframes flash{from{box-shadow:0 0 0 0 rgba(255,215,0,.8)} to{box-shadow:0 0 24px 10px rgba(255,215,0,0)}}
+    /* BA time ribbon & share row */
+    .ribbon{position:fixed; bottom:10px; left:50%; transform:translateX(-50%); background:rgba(0,0,0,.35); border:1px solid rgba(255,215,0,.4); padding:6px 12px; border-radius:14px; font-size:.92rem; backdrop-filter:blur(6px); z-index:6}
+    .ribbon.flash{animation:flash 1.4s ease}
+    @keyframes flash{from{box-shadow:0 0 0 0 rgba(255,215,0,.8)} to{box-shadow:0 0 24px 10px rgba(255,215,0,0)}}
 
-  .share{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:10px}
+    .share{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:10px}
 
-  /* INTERLUDE overlay (champagne & Lindt between memory 3→4) */
-  #interlude{
-    position:fixed; inset:0; z-index:30; display:grid; place-items:center;
-    background: rgba(0,0,0,.65);
-    /* Show WebP if present, else JPG (fallback listed second layer) */
-    background-image:
-      image-set(
-        url("./images/lindt-sepia.webp") type("image/webp"),
-        url("./images/lindt-sepia.jpg") type("image/jpeg")
-      ),
-      url("./images/lindt-sepia.jpg");
-    background-position:center; background-size:cover; background-repeat:no-repeat;
-    opacity:0; pointer-events:none; transition:opacity .6s ease;
-  }
-  #interlude.show{ opacity:1; }
-  #interlude .i-card{
-    background:rgba(0,0,0,.45); color:#fff; border:1.5px solid rgba(255,215,0,.5);
-    padding:14px 18px; border-radius:16px; text-align:center; backdrop-filter:blur(6px);
-    font-family:'Dancing Script',cursive; font-size:1.4rem; text-shadow:0 2px 6px rgba(0,0,0,.6)
-  }
-  #interlude .i-sub{ font-family:'Cinzel',serif; font-size:.95rem; opacity:.9 }
+    /* interlude overlay (champagne & Lindt) */
+    #interlude{
+      position:fixed; inset:0; z-index:18; display:none;
+      background: rgba(0,0,0,.45) center / contain no-repeat;
+      backdrop-filter: blur(2px);
+      opacity:0; transition: opacity .6s ease;
+    }
+    #interlude.show{ display:block; opacity:1; }
 
-  /* accessibility */
-  :focus-visible{outline:2px solid #ffd700; outline-offset:3px}
+    /* accessibility */
+    :focus-visible{outline:2px solid #ffd700; outline-offset:3px}
 
-  /* reduced motion */
-  @media (prefers-reduced-motion: reduce){
-    .heart,.spark,.star,.line,.hstar,.fw{animation:none !important}
-    .hearts,.sparkles{display:none}
-  }
+    /* reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      .heart,.spark,.star,.line,.hstar,.fw{animation:none !important}
+      .hearts,.sparkles{display:none}
+    }
   </style>
 </head>
 <body>
 
 <div class="stars-bg"></div>
+<!-- Champagne & Lindt interlude (shows ~2s between memories 3→4) -->
+<div id="interlude" aria-hidden="true"></div>
 
 <div class="topbar">
   <div class="group">
@@ -216,14 +202,13 @@
     <h1 class="title">✨ Constellation of Us ✨</h1>
     <div class="card">
       <p class="lead" id="mainIntro">
-        Turn on music first, <em>por favor</em> 🎵 — then tap
+        Press play on <strong>“Underneath Your Clothes”</strong> first, <em>por favor</em> 🎵 — then tap
         <strong>Begin Our Constellation 💫</strong>.
       </p>
       <div class="row">
-        <button class="btn" id="musicBtn">🎵 Play Music</button>
         <a class="btn" id="shakiraBtn" target="_blank" rel="noopener">▶️ Open “Underneath Your Clothes”</a>
       </div>
-      <p class="small" id="musicNote">Music starts after you tap — you can pause anytime.</p>
+      <p class="small" id="musicNote">If it opens the Spotify app, keep it playing and come back here. If it opens in the browser, just press play and return.</p>
     </div>
     <div class="row">
       <button class="btn" id="startBtn">Begin Our Constellation 💫</button>
@@ -296,27 +281,18 @@
   </div>
 </div>
 
-<!-- Fireworks + BA ribbon -->
 <div class="fireworks" id="fireworks"></div>
 <div class="ribbon" id="baRibbon">Buenos Aires: —:—</div>
-
-<!-- Interlude overlay -->
-<div id="interlude" aria-hidden="true">
-  <div class="i-card">
-    <div>Mi Amor — Champagne &amp; Lindt Kisses Tradition</div>
-    <div class="i-sub">Buenos Aires • 28 Aug 2019</div>
-  </div>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
 <script>
 /* ========= CONFIG ========= */
-const spotifyTrack = "https://open.spotify.com/search/Underneath%20Your%20Clothes%20Shakira"; // opens track search
+const spotifyTrack = "https://open.spotify.com/search/Underneath%20Your%20Clothes%20Shakira";
 const playlistUrl  = "https://open.spotify.com/playlist/2R3GciDXqqgygQxAveD4j0?si=xaAU7KY9TYCb9TDsK6FYVA";
+const INTERLUDE_SRC = 'images/lindt-sepia.jpg'; // make sure this file exists
 /* ========================= */
 
 const qs = sel => document.querySelector(sel);
-const qsa = sel => [...document.querySelectorAll(sel)];
 const screens = { greet:qs('#greet'), main:qs('#main'), game:qs('#game'), finale:qs('#finale') };
 const canvas = qs('#canvas'), hearts = qs('#hearts'), sparkles = qs('#sparkles');
 const progress = qs('#progNum'), fireworks = qs('#fireworks');
@@ -324,24 +300,27 @@ const secretHeart = qs('#secretHeart');
 const memPop = qs('#memPop'), mScene=qs('#mScene'), mTitle=qs('#mTitle'), mText=qs('#mText'), memOk=qs('#memOk');
 const secretPop = qs('#secretPop'), sText=qs('#sText'), toPlaylist=qs('#toPlaylist');
 const playlistPop = qs('#playlistPop'), playlistLink=qs('#playlistLink'), closePlaylist=qs('#closePlaylist');
-const musicBtn = qs('#musicBtn'), shakiraBtn=qs('#shakiraBtn'), startBtn=qs('#startBtn'), toMain=qs('#toMain');
+const shakiraBtn=qs('#shakiraBtn'), startBtn=qs('#startBtn'), toMain=qs('#toMain');
 const againBtn=qs('#againBtn'), waBtn=qs('#waBtn'), saveBtn=qs('#saveBtn');
 const themeBtn=qs('#themeBtn'), langBtn=qs('#langBtn'), spicyBtn=qs('#spicyBtn'), statusBadge=qs('#statusBadge');
 const baRibbon = qs('#baRibbon');
+const interlude = document.getElementById('interlude');
 
-let placed=[], current=0, spicy=true, lang='en', lastShown=-1;
+// preload interlude image
+const _interludePreload = new Image();
+_interludePreload.src = INTERLUDE_SRC;
+
+let placed=[], current=0, spicy=true, lang='en';
 let theme = localStorage.getItem('coou_theme')||'ba';
 if(theme==='syd') document.body.classList.add('sydney');
 themeBtn.textContent = theme==='ba' ? '🌙 Buenos Aires Night' : '🌤️ Sydney Morning';
-
-let musicCtx=null, musicNode=null, musicPlaying=false;
 
 /* ============ CONTENT (EN + ES) ============ */
 const content = {
   en:{
     greet:"Good morning my Mi Amor, I’ve been thinking and dreaming of you so much lately, I thought I’d surprise you with a game with some of these memories I’ve been thinking of lately 😘😈🔥",
-    mainIntro:"Turn on music first, <em>por favor</em> 🎵 — then tap <strong>Begin Our Constellation 💫</strong>.",
-    musicNote:"Music starts after you tap — you can pause anytime.",
+    mainIntro:`Press play on <strong>“Underneath Your Clothes”</strong> first, <em>por favor</em> 🎵 — then tap <strong>Begin Our Constellation 💫</strong>.`,
+    musicNote:"If it opens the Spotify app, keep it playing and come back here. If it opens in the browser, just press play and return.",
     tapHint:"Touch anywhere in the sky to place your next star ⭐",
     cert:`This constellation belongs to Mi Amor and her love, shining forever between Sydney and Buenos Aires.
           <br><em>Seven stars, seven memories, infinite love.</em>
@@ -366,8 +345,8 @@ const content = {
   },
   es:{
     greet:"Buen día, Mi Amor. Estuve pensando y soñando con vos… así que te hice un cielo con lo nuestro. ¿Jugamos? 😘😈🔥",
-    mainIntro:"Primero prendé la música, <em>por favor</em> 🎵 — y después tocá <strong>Empezar nuestra constelación 💫</strong>.",
-    musicNote:"La música arranca después de tocar — podés pausarla cuando quieras.",
+    mainIntro:`Primero poné <strong>“Underneath Your Clothes”</strong>, <em>por favor</em> 🎵 — y después tocá <strong>Empezar nuestra constelación 💫</strong>.`,
+    musicNote:"Si se abre la app de Spotify, dejala sonando y volvé acá. Si se abre en el navegador, dale play y regresá.",
     tapHint:"Tocá el cielo para colocar la próxima estrella ⭐",
     cert:`Esta constelación es de Mi Amor y su amor, brillando para siempre entre Sídney y Buenos Aires.
           <br><em>Siete estrellas, siete recuerdos, amor infinito.</em>
@@ -392,67 +371,39 @@ const content = {
   }
 };
 
-/* ====== TEXT BINDINGS (i18n) ====== */
+/* ====== i18n bindings ====== */
 function applyLang(){
   qs('#greetText').innerHTML = content[lang].greet;
   qs('#mainIntro').innerHTML = content[lang].mainIntro;
   qs('#musicNote').textContent = content[lang].musicNote;
   qs('#tapHint').textContent = content[lang].tapHint;
   qs('#certText').innerHTML = content[lang].cert;
-  qs('#pText').firstChild && (qs('#pText').firstChild.textContent = content[lang].playlistLead + " ");
+  qs('#pText') && qs('#pText').firstChild && (qs('#pText').firstChild.textContent = content[lang].playlistLead + " ");
   langBtn.textContent = (lang==='en'?'🇬🇧 EN':'🇦🇷 ES');
 }
 
-/* ====== MUSIC (WebAudio soft pad) ====== */
-function initMusic(){
-  if(musicCtx) return;
-  musicCtx = new (window.AudioContext||window.webkitAudioContext)();
-  const osc = musicCtx.createOscillator();
-  const gain = musicCtx.createGain();
-  const filt = musicCtx.createBiquadFilter();
-  osc.type='sawtooth';
-  osc.frequency.value=220; // A3
-  filt.type='lowpass'; filt.frequency.value=1200;
-  gain.gain.value=0.0001;
-  osc.connect(filt).connect(gain).connect(musicCtx.destination);
-  osc.start();
-  gain.gain.linearRampToValueAtTime(0.02, musicCtx.currentTime+1.2);
-  musicNode={osc,gain,filt};
-}
-function playMusic(){
-  initMusic();
-  if(musicCtx.state==='suspended') musicCtx.resume();
-  musicNode.gain.gain.cancelScheduledValues(musicCtx.currentTime);
-  musicNode.gain.gain.linearRampToValueAtTime(0.02, musicCtx.currentTime+0.8);
-  musicPlaying=true; musicBtn.textContent='⏸ Pause Music'; statusBadge.textContent='🎵';
-}
-function pauseMusic(){
-  if(!musicCtx) return;
-  musicNode.gain.gain.linearRampToValueAtTime(0.0001, musicCtx.currentTime+0.4);
-  musicPlaying=false; musicBtn.textContent='🎵 Play Music'; statusBadge.textContent='💫';
-}
-
-/* ====== SPARKLES & HEARTS ====== */
+/* ====== Sparkles & Hearts (reduced density) ====== */
 function burstSparkles(){
   sparkles.classList.add('active');
-  for(let i=0;i<35;i++){
+  for(let i=0;i<24;i++){
     const s=document.createElement('div'); s.className='spark';
     s.style.left=(Math.random()*100)+'%'; s.style.top=(Math.random()*100)+'%';
-    s.style.animationDelay=(Math.random()*1.2)+'s';
-    sparkles.appendChild(s); setTimeout(()=>s.remove(),1800);
+    s.style.animationDelay=(Math.random()*1.1)+'s';
+    sparkles.appendChild(s); setTimeout(()=>s.remove(),1600);
   }
-  setTimeout(()=>sparkles.classList.remove('active'),1200);
+  setTimeout(()=>sparkles.classList.remove('active'),1000);
 }
-function floatHeartsLoop(){
+function spawnHeart(){
+  if(hearts.children.length>24){ hearts.firstChild.remove(); }
   const h=document.createElement('div'); h.className='heart'; h.textContent='❤';
-  const size=16+Math.random()*14; h.style.fontSize=size+'px';
-  h.style.left=(Math.random()*100)+'%'; h.style.animationDuration=(10+Math.random()*6)+'s';
+  const size=14+Math.random()*10; h.style.fontSize=size+'px';
+  h.style.left=(Math.random()*100)+'%'; h.style.animationDuration=(10+Math.random()*5)+'s';
   hearts.appendChild(h); setTimeout(()=>h.remove(),13000);
-  requestAnimationFrame(()=>floatHeartsLoop());
 }
-floatHeartsLoop();
+for(let i=0;i<8;i++) setTimeout(spawnHeart, i*250);
+setInterval(spawnHeart, 1500);
 
-/* ====== CONSTELLATION ====== */
+/* ====== Constellation ====== */
 function lineBetween(a,b){
   const dx=b.x-a.x, dy=b.y-a.y, dist=Math.hypot(dx,dy);
   const ang=Math.atan2(dy,dx)*180/Math.PI;
@@ -477,23 +428,23 @@ canvas.addEventListener('click',(e)=>{
   placeStar(e.clientX-rect.left, e.clientY-rect.top);
 });
 
-/* ====== MEMORIES ====== */
+/* ====== Memories & Interlude (3→4) ====== */
 function showMemory(idx){
-  lastShown = idx;
   const mem = content[lang].mems[idx];
   mScene.textContent=mem.scene; mTitle.textContent=mem.title; mText.textContent=mem.text;
   memPop.classList.add('show'); burstSparkles();
 }
+function showInterlude(){
+  interlude.style.backgroundImage = `url('${INTERLUDE_SRC}')`;
+  interlude.classList.add('show');
+  setTimeout(()=> interlude.classList.remove('show'), 2000);
+}
 memOk.addEventListener('click',()=>{
   memPop.classList.remove('show');
-  // Interlude right after memory #3 (index 2)
-  if (lastShown === 2 && !window._interludePlayed){
-    window._interludePlayed = true;
-    showInterlude();
-  }
+  if (current === 3) showInterlude(); // after closing memory #3
 });
 
-/* ====== SECRET STAR ====== */
+/* ====== Secret star & playlist ====== */
 secretHeart.addEventListener('click',()=>{
   sText.innerHTML = content[lang].secret(spicy);
   secretPop.classList.add('show'); burstSparkles();
@@ -508,14 +459,7 @@ closePlaylist.addEventListener('click',()=>{
   finishGame();
 });
 
-/* ====== INTERLUDE ====== */
-const interludeEl = document.getElementById('interlude');
-function showInterlude(){
-  interludeEl.classList.add('show');
-  setTimeout(()=> interludeEl.classList.remove('show'), 2000);
-}
-
-/* ====== FINALE ====== */
+/* ====== Finale ====== */
 function finishGame(){
   show('finale'); drawHeartConstellation(); fireworksShow();
   const url = encodeURIComponent(location.href);
@@ -542,16 +486,13 @@ function fireworksShow(){
   }
 }
 
-/* ====== NAV / STATE ====== */
+/* ====== Nav / State ====== */
 function show(id){ Object.values(screens).forEach(s=>s.classList.remove('active')); screens[id].classList.add('active'); burstSparkles(); }
 toMain.addEventListener('click',()=>{ show('main'); });
-startBtn.addEventListener('click',()=>{
-  show('game'); if(!musicPlaying) playMusic();
-});
-musicBtn.addEventListener('click',()=>{ musicPlaying?pauseMusic():playMusic(); });
+startBtn.addEventListener('click',()=>{ show('game'); });
 shakiraBtn.href = spotifyTrack;
 
-/* ====== THEME, LANG, SPICY ====== */
+/* ====== Theme, Lang, Spicy ====== */
 themeBtn.addEventListener('click',()=>{
   document.body.classList.toggle('sydney');
   theme = document.body.classList.contains('sydney') ? 'syd':'ba';
@@ -563,7 +504,7 @@ spicyBtn.addEventListener('click',()=>{
   spicy=!spicy; spicyBtn.textContent = spicy ? '🔥 Spicy: ON' : '🌸 Spicy: OFF';
 });
 
-/* ====== BA TIME RIBBON ====== */
+/* ====== BA time ribbon ====== */
 function updateBA(){
   const now = new Date();
   const fmt = new Intl.DateTimeFormat('en-AR',{timeZone:'America/Argentina/Buenos_Aires',hour:'2-digit',minute:'2-digit'});
@@ -573,25 +514,23 @@ function updateBA(){
 }
 setInterval(updateBA,20000); updateBA();
 
-/* ====== SAVE IMAGE ====== */
+/* ====== Save image ====== */
 saveBtn?.addEventListener('click',()=>{
   html2canvas(canvas).then(c=>{
     const a=document.createElement('a'); a.download='ConstellationOfUs.png'; a.href=c.toDataURL('image/png'); a.click();
   });
 });
 
-/* ====== PROGRESS ====== */
+/* ====== Progress reset ====== */
 function resetGame(){
-  placed=[]; current=0; progress.textContent=0;
-  canvas.innerHTML='<div class="hidden-heart" id="secretHeart" title="Psst… tap me after the 7th star 💖">💖</div>';
-  qs('#secretHeart').addEventListener('click',()=>{ sText.innerHTML = content[lang].secret(spicy); secretPop.classList.add('show'); });
+  placed=[]; current=0; progress.textContent=0; canvas.innerHTML='<div class="hidden-heart" id="secretHeart">💖</div>';
+  document.getElementById('secretHeart').addEventListener('click',()=>{
+    sText.innerHTML = content[lang].secret(spicy); secretPop.classList.add('show');
+  });
   show('game'); statusBadge.textContent='💫';
   localStorage.removeItem('coou_progress');
 }
 applyLang();
-
-/* start some hearts immediately */
-for(let i=0;i<10;i++) setTimeout(()=>floatHeartsLoop(), i*250);
 </script>
 </body>
 </html>
