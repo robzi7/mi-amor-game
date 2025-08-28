@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Core -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>✨ Constellation of Us — Mi Amor Nights Edition ✨</title>
@@ -11,157 +12,172 @@
   <link rel="apple-touch-icon" href="/mi-amor-game/icon-192.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
 
-  <!-- Link preview -->
-  <meta property="og:url" content="https://robzi7.github.io/mi-amor-game/">
-  <meta property="og:image" content="https://robzi7.github.io/mi-amor-game/og-cover.jpg">
-  <meta name="twitter:card" content="summary_large_image">
+  <!-- Open Graph / Twitter (link preview) -->
+  <meta property="og:url" content="https://robzi7.github.io/mi-amor-game/" />
+  <meta property="og:title" content="Constellation of Us — Mi Amor Nights Edition 💫" />
+  <meta property="og:description" content="A little sky full of our memories. Tap to begin." />
+  <meta property="og:image" content="https://robzi7.github.io/mi-amor-game/og-cover.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Your existing favicon, fonts, styles below -->
-  <link rel="icon" href="data:image/svg+xml,...">
-  <link href="https://fonts.googleapis.com/..." rel="stylesheet">
-  <style>/* … */</style>
-</head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>✨ Constellation of Us — Mi Amor Nights Edition ✨</title>
-<meta name="theme-color" content="#0a0a2e" />
-<meta property="og:title" content="Constellation of Us — Mi Amor Nights Edition 💫" />
-<meta property="og:description" content="A little sky full of our memories. Tap to begin." />
-<meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB..." />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Favicon & Fonts -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --indigo:#0a0a2e; --mid:#16213e; --royal:#1a237e; --violet:#3949ab;
-  --ba-grad: radial-gradient(1200px 600px at 10% 0%, rgba(255,255,255,.08), transparent 40%),
-             linear-gradient(135deg,var(--indigo) 0%,var(--mid) 30%,var(--royal) 70%,var(--violet) 100%);
-  --syd-grad: radial-gradient(1200px 600px at 10% 0%, rgba(255,255,255,.08), transparent 40%),
-              linear-gradient(135deg,#ffb46a 0%,#ffd08a 35%,#ffb74d 70%,#ff9800 100%);
-  --gold:#ffd700; --pink:#ff69b4; --rose:#ff1493; --paper:#efe1c9;
-}
-*{box-sizing:border-box; margin:0}
-html,body{height:100%}
-body{
-  font-family:'Cinzel',serif; color:#fff; background:var(--ba-grad); overflow:hidden;
-}
-body.sydney{ background:var(--syd-grad); }
-h1,h2,h3{font-weight:600}
-a{color:#ffd700}
-button{font-family:inherit}
+  <!-- Styles -->
+  <style>
+  :root{
+    --indigo:#0a0a2e; --mid:#16213e; --royal:#1a237e; --violet:#3949ab;
+    --ba-grad: radial-gradient(1200px 600px at 10% 0%, rgba(255,255,255,.08), transparent 40%),
+               linear-gradient(135deg,var(--indigo) 0%,var(--mid) 30%,var(--royal) 70%,var(--violet) 100%);
+    --syd-grad: radial-gradient(1200px 600px at 10% 0%, rgba(255,255,255,.08), transparent 40%),
+                linear-gradient(135deg,#ffb46a 0%,#ffd08a 35%,#ffb74d 70%,#ff9800 100%);
+    --gold:#ffd700; --pink:#ff69b4; --rose:#ff1493; --paper:#efe1c9;
+  }
+  *{box-sizing:border-box; margin:0}
+  html,body{height:100%}
+  body{
+    font-family:'Cinzel',serif; color:#fff; background:var(--ba-grad); overflow:hidden;
+  }
+  body.sydney{ background:var(--syd-grad); }
+  h1,h2,h3{font-weight:600}
+  a{color:#ffd700}
+  button{font-family:inherit}
 
-.stars-bg{position:fixed; inset:0; pointer-events:none; background-size:250px 150px;
-  background:
-    radial-gradient(2px 2px at 20px 30px,rgba(255,255,255,.9),transparent 60%),
-    radial-gradient(2px 2px at 120px 90px,rgba(255,215,0,.8),transparent 60%),
-    radial-gradient(1px 1px at 230px 40px,rgba(255,255,255,.6),transparent 60%),
-    radial-gradient(3px 3px at 310px 120px,rgba(255,182,193,.7),transparent 60%);
-  animation:twinkle 6s ease-in-out infinite alternate;
-}
-@keyframes twinkle{0%{opacity:.5;transform:scale(1)}50%{opacity:.9;transform:scale(1.05)}100%{opacity:.6;transform:scale(1)}}
+  .stars-bg{position:fixed; inset:0; pointer-events:none; background-size:250px 150px;
+    background:
+      radial-gradient(2px 2px at 20px 30px,rgba(255,255,255,.9),transparent 60%),
+      radial-gradient(2px 2px at 120px 90px,rgba(255,215,0,.8),transparent 60%),
+      radial-gradient(1px 1px at 230px 40px,rgba(255,255,255,.6),transparent 60%),
+      radial-gradient(3px 3px at 310px 120px,rgba(255,182,193,.7),transparent 60%);
+    animation:twinkle 6s ease-in-out infinite alternate;
+  }
+  @keyframes twinkle{0%{opacity:.5;transform:scale(1)}50%{opacity:.9;transform:scale(1.05)}100%{opacity:.6;transform:scale(1)}}
 
-.app{position:relative; z-index:1; height:100%; display:grid; place-items:center}
-.screen{display:none; text-align:center; max-width:900px; width:95%; padding:16px; animation:fadeIn .9s ease}
-.screen.active{display:block}
-@keyframes fadeIn{from{opacity:0; transform:translateY(18px) scale(.98)} to{opacity:1; transform:none}}
+  .app{position:relative; z-index:1; height:100%; display:grid; place-items:center}
+  .screen{display:none; text-align:center; max-width:900px; width:95%; padding:16px; animation:fadeIn .9s ease}
+  .screen.active{display:block}
+  @keyframes fadeIn{from{opacity:0; transform:translateY(18px) scale(.98)} to{opacity:1; transform:none}}
 
-.title{font-family:'Dancing Script',cursive; font-size:clamp(2.6rem,7vw,4.5rem);
-  background:linear-gradient(45deg,#ffd700,#ff69b4,#87ceeb,#ffd700); background-size:300% 300%;
-  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; animation:grad 9s linear infinite}
-@keyframes grad{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+  .title{font-family:'Dancing Script',cursive; font-size:clamp(2.6rem,7vw,4.5rem);
+    background:linear-gradient(45deg,#ffd700,#ff69b4,#87ceeb,#ffd700); background-size:300% 300%;
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; animation:grad 9s linear infinite}
+  @keyframes grad{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
 
-.card{
-  background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,215,0,.10));
-  border:1.5px solid rgba(255,215,0,.35); border-radius:22px; padding:22px; backdrop-filter:blur(12px);
-  box-shadow:0 18px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.25);
-  margin-inline:auto
-}
-.lead{font-size:clamp(1.05rem,2.8vw,1.3rem); line-height:1.8; color:#fff}
+  .card{
+    background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,215,0,.10));
+    border:1.5px solid rgba(255,215,0,.35); border-radius:22px; padding:22px; backdrop-filter:blur(12px);
+    box-shadow:0 18px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.25);
+    margin-inline:auto
+  }
+  .lead{font-size:clamp(1.05rem,2.8vw,1.3rem); line-height:1.8; color:#fff}
 
-.btn{
-  display:inline-block; border:0; border-radius:999px; padding:14px 28px; margin:10px;
-  color:#fff; cursor:pointer; font-weight:600; font-size:clamp(1rem,3.2vw,1.15rem);
-  background:linear-gradient(135deg,#ff69b4 0%,#ff1493 45%,#dc143c 100%);
-  box-shadow:0 10px 24px rgba(255,20,147,.35), inset 0 1px 0 rgba(255,255,255,.3);
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-.btn:hover{transform:translateY(-2px); box-shadow:0 14px 30px rgba(255,20,147,.5), inset 0 1px 0 rgba(255,255,255,.4)}
+  .btn{
+    display:inline-block; border:0; border-radius:999px; padding:14px 28px; margin:10px;
+    color:#fff; cursor:pointer; font-weight:600; font-size:clamp(1rem,3.2vw,1.15rem);
+    background:linear-gradient(135deg,#ff69b4 0%,#ff1493 45%,#dc143c 100%);
+    box-shadow:0 10px 24px rgba(255,20,147,.35), inset 0 1px 0 rgba(255,255,255,.3);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn:hover{transform:translateY(-2px); box-shadow:0 14px 30px rgba(255,20,147,.5), inset 0 1px 0 rgba(255,255,255,.4)}
 
-.small{font-size:.9rem; opacity:.9}
-.row{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
+  .small{font-size:.9rem; opacity:.9}
+  .row{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
 
-/* top toggles */
-.topbar{position:fixed; top:12px; left:12px; right:12px; display:flex; gap:8px; justify-content:space-between; z-index:9}
-.group{display:flex; gap:8px}
-.toggle{background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,215,0,.35); border-radius:16px; padding:8px 14px; cursor:pointer; font-size:.92rem; backdrop-filter:blur(10px)}
-.toggle:hover{background:rgba(255,215,0,.2)}
-.badge{font-size:.9rem; color:#ffd700}
+  /* top toggles */
+  .topbar{position:fixed; top:12px; left:12px; right:12px; display:flex; gap:8px; justify-content:space-between; z-index:9}
+  .group{display:flex; gap:8px}
+  .toggle{background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,215,0,.35); border-radius:16px; padding:8px 14px; cursor:pointer; font-size:.92rem; backdrop-filter:blur(10px)}
+  .toggle:hover{background:rgba(255,215,0,.2)}
+  .badge{font-size:.9rem; color:#ffd700}
 
-/* hearts & sparkles */
-.hearts, .sparkles {position:fixed; inset:0; pointer-events:none; z-index:2}
-.heart{position:absolute; font-size:18px; color:#ff69b4; opacity:.85; animation:float 12s linear infinite}
-@keyframes float{from{transform:translateY(100vh) translateX(0)} to{transform:translateY(-10vh) translateX(40px)}}
-.sparkles{opacity:0; transition:opacity .5s}
-.sparkles.active{opacity:1}
-.spark{position:absolute; width:4px; height:4px; background:#ffd700; border-radius:50%; animation:spark 1.6s ease-in-out infinite}
-@keyframes spark{0%,100%{transform:scale(0); opacity:0}50%{transform:scale(1.6); opacity:1}}
+  /* hearts & sparkles */
+  .hearts, .sparkles {position:fixed; inset:0; pointer-events:none; z-index:2}
+  .heart{position:absolute; font-size:18px; color:#ff69b4; opacity:.85; animation:float 12s linear infinite}
+  @keyframes float{from{transform:translateY(100vh) translateX(0)} to{transform:translateY(-10vh) translateX(40px)}}
+  .sparkles{opacity:0; transition:opacity .5s}
+  .sparkles.active{opacity:1}
+  .spark{position:absolute; width:4px; height:4px; background:#ffd700; border-radius:50%; animation:spark 1.6s ease-in-out infinite}
+  @keyframes spark{0%,100%{transform:scale(0); opacity:0}50%{transform:scale(1.6); opacity:1}}
 
-/* constellation */
-.canvas{position:relative; width:min(92vw,900px); height:min(64vh,520px);
-  border:2px solid rgba(255,215,0,.4); border-radius:26px; margin:10px auto; overflow:hidden;
-  background:rgba(0,0,0,.28); box-shadow:0 30px 60px rgba(0,0,0,.45), inset 0 0 90px rgba(255,215,0,.08)}
-.info{color:#ffb6c1; margin-bottom:8px}
+  /* constellation */
+  .canvas{position:relative; width:min(92vw,900px); height:min(64vh,520px);
+    border:2px solid rgba(255,215,0,.4); border-radius:26px; margin:10px auto; overflow:hidden;
+    background:rgba(0,0,0,.28); box-shadow:0 30px 60px rgba(0,0,0,.45), inset 0 0 90px rgba(255,215,0,.08)}
+  .info{color:#ffb6c1; margin-bottom:8px}
 
-.star{position:absolute; width:30px; height:30px; transform-origin:center; filter:drop-shadow(0 0 12px currentColor); animation:floatStar 3s ease-in-out infinite}
-.star::before{content:'⭐'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); animation:spin 6s linear infinite, pulse 2.3s ease-in-out infinite alternate}
-@keyframes floatStar{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
-@keyframes pulse{from{filter:brightness(1)}to{filter:brightness(1.4)}}
-.star.pop{animation:pop .9s ease}
-@keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.4)}100%{transform:scale(1)}}
+  .star{position:absolute; width:30px; height:30px; transform-origin:center; filter:drop-shadow(0 0 12px currentColor); animation:floatStar 3s ease-in-out infinite}
+  .star::before{content:'⭐'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); animation:spin 6s linear infinite, pulse 2.3s ease-in-out infinite alternate}
+  @keyframes floatStar{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+  @keyframes pulse{from{filter:brightness(1)}to{filter:brightness(1.4)}}
+  .star.pop{animation:pop .9s ease}
+  @keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.4)}100%{transform:scale(1)}}
 
-.line{position:absolute; height:3px; background:linear-gradient(90deg,transparent,rgba(255,215,0,.9) 20%, rgba(255,105,180,.9) 60%, transparent); border-radius:2px; transform-origin:left center; animation:lineGrow .9s ease-out}
-@keyframes lineGrow{from{width:0; opacity:0} to{width:100%; opacity:1}}
+  .line{position:absolute; height:3px; background:linear-gradient(90deg,transparent,rgba(255,215,0,.9) 20%, rgba(255,105,180,.9) 60%, transparent); border-radius:2px; transform-origin:left center; animation:lineGrow .9s ease-out}
+  @keyframes lineGrow{from{width:0; opacity:0} to{width:100%; opacity:1}}
 
-.hidden-heart{position:absolute; right:14px; bottom:14px; font-size:42px; color:#ff69b4; display:none;
-  filter:drop-shadow(0 0 18px #ff69b4); animation:beat 1.6s ease-in-out infinite}
-.hidden-heart.show{display:block}
-@keyframes beat{0%{transform:scale(1)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
+  .hidden-heart{position:absolute; right:14px; bottom:14px; font-size:42px; color:#ff69b4; display:none;
+    filter:drop-shadow(0 0 18px #ff69b4); animation:beat 1.6s ease-in-out infinite}
+  .hidden-heart.show{display:block}
+  @keyframes beat{0%{transform:scale(1)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
 
-/* popups */
-.popup{position:fixed; inset:0; display:none; place-items:center; z-index:20; padding:18px}
-.popup.show{display:grid}
-.modal{max-width:680px; width:min(92vw,680px); background:linear-gradient(135deg,rgba(25,25,60,.95),rgba(50,25,80,.95)); border:3px solid var(--gold); border-radius:28px; padding:26px; text-align:center; box-shadow:0 28px 60px rgba(0,0,0,.65)}
-.scene{font-size:clamp(2.4rem,10vw,4.6rem); margin:6px 0}
-.mtitle{font-family:'Dancing Script',cursive; font-size:clamp(1.6rem,6vw,2.4rem); color:var(--gold); margin:4px 0 8px; text-shadow:0 0 14px rgba(255,215,0,.6)}
-.mtext{font-size:clamp(1rem,3.2vw,1.25rem); line-height:1.8; color:#ffb6c1; margin:10px 0 14px}
+  /* popups */
+  .popup{position:fixed; inset:0; display:none; place-items:center; z-index:20; padding:18px}
+  .popup.show{display:grid}
+  .modal{max-width:680px; width:min(92vw,680px); background:linear-gradient(135deg,rgba(25,25,60,.95),rgba(50,25,80,.95)); border:3px solid var(--gold); border-radius:28px; padding:26px; text-align:center; box-shadow:0 28px 60px rgba(0,0,0,.65)}
+  .scene{font-size:clamp(2.4rem,10vw,4.6rem); margin:6px 0}
+  .mtitle{font-family:'Dancing Script',cursive; font-size:clamp(1.6rem,6vw,2.4rem); color:var(--gold); margin:4px 0 8px; text-shadow:0 0 14px rgba(255,215,0,.6)}
+  .mtext{font-size:clamp(1rem,3.2vw,1.25rem); line-height:1.8; color:#ffb6c1; margin:10px 0 14px}
 
-.progress{position:fixed; top:58px; right:12px; z-index:5; background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,215,0,.18)); border:1.5px solid rgba(255,215,0,.35); border-radius:16px; padding:10px 14px; backdrop-filter:blur(10px); color:var(--gold); font-size:.95rem}
+  .progress{position:fixed; top:58px; right:12px; z-index:5; background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,215,0,.18)); border:1.5px solid rgba(255,215,0,.35); border-radius:16px; padding:10px 14px; backdrop-filter:blur(10px); color:var(--gold); font-size:.95rem}
 
-.fireworks{position:fixed; inset:0; pointer-events:none; z-index:25}
-.fw{position:absolute; width:6px; height:6px; border-radius:50%; animation:boom 2.8s ease-out forwards}
-@keyframes boom{from{transform:scale(1); opacity:1} to{transform:scale(28); opacity:0}}
+  .fireworks{position:fixed; inset:0; pointer-events:none; z-index:25}
+  .fw{position:absolute; width:6px; height:6px; border-radius:50%; animation:boom 2.8s ease-out forwards}
+  @keyframes boom{from{transform:scale(1); opacity:1} to{transform:scale(28); opacity:0}}
 
-.heart-const{width:360px; height:280px; margin:16px auto; position:relative}
-.hstar{position:absolute; font-size:22px; filter:drop-shadow(0 0 12px #ffd700); animation:hblink 1.6s ease-in-out infinite alternate}
-@keyframes hblink{from{opacity:.6; transform:scale(.9)} to{opacity:1; transform:scale(1.15)}}
+  .heart-const{width:360px; height:280px; margin:16px auto; position:relative}
+  .hstar{position:absolute; font-size:22px; filter:drop-shadow(0 0 12px #ffd700); animation:hblink 1.6s ease-in-out infinite alternate}
+  @keyframes hblink{from{opacity:.6; transform:scale(.9)} to{opacity:1; transform:scale(1.15)}}
 
-/* BA time ribbon & share row */
-.ribbon{position:fixed; bottom:10px; left:50%; transform:translateX(-50%); background:rgba(0,0,0,.35); border:1px solid rgba(255,215,0,.4); padding:6px 12px; border-radius:14px; font-size:.92rem; backdrop-filter:blur(6px); z-index:6}
-.ribbon.flash{animation:flash 1.4s ease}
-@keyframes flash{from{box-shadow:0 0 0 0 rgba(255,215,0,.8)} to{box-shadow:0 0 24px 10px rgba(255,215,0,0)}}
+  /* BA time ribbon & share row */
+  .ribbon{position:fixed; bottom:10px; left:50%; transform:translateX(-50%); background:rgba(0,0,0,.35); border:1px solid rgba(255,215,0,.4); padding:6px 12px; border-radius:14px; font-size:.92rem; backdrop-filter:blur(6px); z-index:6}
+  .ribbon.flash{animation:flash 1.4s ease}
+  @keyframes flash{from{box-shadow:0 0 0 0 rgba(255,215,0,.8)} to{box-shadow:0 0 24px 10px rgba(255,215,0,0)}}
 
-.share{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:10px}
+  .share{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:10px}
 
-/* accessibility */
-:focus-visible{outline:2px solid #ffd700; outline-offset:3px}
+  /* INTERLUDE overlay (champagne & Lindt between memory 3→4) */
+  #interlude{
+    position:fixed; inset:0; z-index:30; display:grid; place-items:center;
+    background: rgba(0,0,0,.65);
+    /* Show WebP if present, else JPG (fallback listed second layer) */
+    background-image:
+      image-set(
+        url("./images/lindt-sepia.webp") type("image/webp"),
+        url("./images/lindt-sepia.jpg") type("image/jpeg")
+      ),
+      url("./images/lindt-sepia.jpg");
+    background-position:center; background-size:cover; background-repeat:no-repeat;
+    opacity:0; pointer-events:none; transition:opacity .6s ease;
+  }
+  #interlude.show{ opacity:1; }
+  #interlude .i-card{
+    background:rgba(0,0,0,.45); color:#fff; border:1.5px solid rgba(255,215,0,.5);
+    padding:14px 18px; border-radius:16px; text-align:center; backdrop-filter:blur(6px);
+    font-family:'Dancing Script',cursive; font-size:1.4rem; text-shadow:0 2px 6px rgba(0,0,0,.6)
+  }
+  #interlude .i-sub{ font-family:'Cinzel',serif; font-size:.95rem; opacity:.9 }
 
-/* reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .heart,.spark,.star,.line,.hstar,.fw{animation:none !important}
-  .hearts,.sparkles{display:none}
-}
-</style>
+  /* accessibility */
+  :focus-visible{outline:2px solid #ffd700; outline-offset:3px}
+
+  /* reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    .heart,.spark,.star,.line,.hstar,.fw{animation:none !important}
+    .hearts,.sparkles{display:none}
+  }
+  </style>
 </head>
 <body>
 
@@ -280,13 +296,22 @@ button{font-family:inherit}
   </div>
 </div>
 
+<!-- Fireworks + BA ribbon -->
 <div class="fireworks" id="fireworks"></div>
 <div class="ribbon" id="baRibbon">Buenos Aires: —:—</div>
+
+<!-- Interlude overlay -->
+<div id="interlude" aria-hidden="true">
+  <div class="i-card">
+    <div>Mi Amor — Champagne &amp; Lindt Kisses Tradition</div>
+    <div class="i-sub">Buenos Aires • 28 Aug 2019</div>
+  </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
 <script>
 /* ========= CONFIG ========= */
-const spotifyTrack = "https://open.spotify.com/search/Underneath%20Your%20Clothes%20Shakira"; // open track search
+const spotifyTrack = "https://open.spotify.com/search/Underneath%20Your%20Clothes%20Shakira"; // opens track search
 const playlistUrl  = "https://open.spotify.com/playlist/2R3GciDXqqgygQxAveD4j0?si=xaAU7KY9TYCb9TDsK6FYVA";
 /* ========================= */
 
@@ -304,7 +329,7 @@ const againBtn=qs('#againBtn'), waBtn=qs('#waBtn'), saveBtn=qs('#saveBtn');
 const themeBtn=qs('#themeBtn'), langBtn=qs('#langBtn'), spicyBtn=qs('#spicyBtn'), statusBadge=qs('#statusBadge');
 const baRibbon = qs('#baRibbon');
 
-let placed=[], current=0, spicy=true, lang='en';
+let placed=[], current=0, spicy=true, lang='en', lastShown=-1;
 let theme = localStorage.getItem('coou_theme')||'ba';
 if(theme==='syd') document.body.classList.add('sydney');
 themeBtn.textContent = theme==='ba' ? '🌙 Buenos Aires Night' : '🌤️ Sydney Morning';
@@ -391,15 +416,12 @@ function initMusic(){
   gain.gain.value=0.0001;
   osc.connect(filt).connect(gain).connect(musicCtx.destination);
   osc.start();
-  // Slow pad swell
-  let up = musicCtx.createGain(); up.gain.value=0.0001; gain.connect(up).connect(musicCtx.destination);
   gain.gain.linearRampToValueAtTime(0.02, musicCtx.currentTime+1.2);
   musicNode={osc,gain,filt};
 }
 function playMusic(){
   initMusic();
   if(musicCtx.state==='suspended') musicCtx.resume();
-  // gentle on
   musicNode.gain.gain.cancelScheduledValues(musicCtx.currentTime);
   musicNode.gain.gain.linearRampToValueAtTime(0.02, musicCtx.currentTime+0.8);
   musicPlaying=true; musicBtn.textContent='⏸ Pause Music'; statusBadge.textContent='🎵';
@@ -457,11 +479,19 @@ canvas.addEventListener('click',(e)=>{
 
 /* ====== MEMORIES ====== */
 function showMemory(idx){
+  lastShown = idx;
   const mem = content[lang].mems[idx];
   mScene.textContent=mem.scene; mTitle.textContent=mem.title; mText.textContent=mem.text;
   memPop.classList.add('show'); burstSparkles();
 }
-memOk.addEventListener('click',()=>{ memPop.classList.remove('show'); });
+memOk.addEventListener('click',()=>{
+  memPop.classList.remove('show');
+  // Interlude right after memory #3 (index 2)
+  if (lastShown === 2 && !window._interludePlayed){
+    window._interludePlayed = true;
+    showInterlude();
+  }
+});
 
 /* ====== SECRET STAR ====== */
 secretHeart.addEventListener('click',()=>{
@@ -478,6 +508,13 @@ closePlaylist.addEventListener('click',()=>{
   finishGame();
 });
 
+/* ====== INTERLUDE ====== */
+const interludeEl = document.getElementById('interlude');
+function showInterlude(){
+  interludeEl.classList.add('show');
+  setTimeout(()=> interludeEl.classList.remove('show'), 2000);
+}
+
 /* ====== FINALE ====== */
 function finishGame(){
   show('finale'); drawHeartConstellation(); fireworksShow();
@@ -488,7 +525,6 @@ againBtn.addEventListener('click',()=>{ resetGame(); });
 
 function drawHeartConstellation(){
   const box=qs('#heartConst'); box.innerHTML='';
-  // parametric heart
   for(let t=0;t<Math.PI*2;t+=0.3){
     const x = 16*Math.pow(Math.sin(t),3);
     const y = 13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t);
@@ -546,7 +582,8 @@ saveBtn?.addEventListener('click',()=>{
 
 /* ====== PROGRESS ====== */
 function resetGame(){
-  placed=[]; current=0; progress.textContent=0; canvas.innerHTML='<div class="hidden-heart" id="secretHeart">💖</div>'; 
+  placed=[]; current=0; progress.textContent=0;
+  canvas.innerHTML='<div class="hidden-heart" id="secretHeart" title="Psst… tap me after the 7th star 💖">💖</div>';
   qs('#secretHeart').addEventListener('click',()=>{ sText.innerHTML = content[lang].secret(spicy); secretPop.classList.add('show'); });
   show('game'); statusBadge.textContent='💫';
   localStorage.removeItem('coou_progress');
